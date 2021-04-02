@@ -1,0 +1,36 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Mã SV</th>
+                <th>Họ Tên</th>
+                <th>Tuổi</th>
+            </tr> 
+        </thead>
+        <tbody>
+            <tr *ngFor="let sv of DanhSachSinhVien">
+                <td>{{sv.MaSV}}</td>
+                <td>{{sv.HoTen}}</td>
+                <td>{{sv.Tuoi}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container"> 
+    <h3>Thêm sinh viên</h3>
+    <div class="form-group">
+        <span>Mã sinh viên</span>
+        <input #MaSv type="text" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <span>Họ tên</span>
+        <input #HoTen type="text" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <span>Tuổi</span>
+        <input #Tuoi type="text" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <button (click)="ThemSinhVien(MaSv.value,HoTen.value,Tuoi.value)" class="btn btn-success">Thêm Sinh Viên</button>
+    </div>
+</div>
