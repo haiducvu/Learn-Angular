@@ -1,0 +1,5 @@
+<p>layout-header works!{{name}}</p>
+ <p [innerHTML]>Họ tên: {{obhocVien.Hoten}} <br/> Gioi tinh: {{obhocVien.GioiTinh}}</p>
+ <!-- #obInput    [(ngModel)]="obhocVien.Hoten"-->
+ <input inputName="Hai" #obInput >    
+<button (click)="ChangeName(obInput)">Click</button>
