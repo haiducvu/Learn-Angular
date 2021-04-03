@@ -11,16 +11,21 @@ import { ThongTinLienHeComponent } from './thong-tin-lien-he/thong-tin-lien-he.c
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component'; 
 import { CoffeeTranhChuComponent } from './coffee-tranh-chu/coffee-tranh-chu.component';
+import { SliderComponent } from './slider/slider.component';
+import { LoaiPhimComponent } from './loai-phim/loai-phim.component';
+import { PhimDangChieuComponent } from './phim-dang-chieu/phim-dang-chieu.component';
+import { PhimSapChieuComponent } from './phim-sap-chieu/phim-sap-chieu.component';
+import { ItemTinTucComponent } from './item-tin-tuc/item-tin-tuc.component';
 
 
 
 @NgModule({
-  declarations: [ItemPhimComponent, TinTucComponent, DienAnhComponent, ReViewComponent, KhuyenMaiComponent, LienHeComponent, FormLienHeComponent, ThongTinLienHeComponent, HeaderComponent, FooterComponent,CoffeeTranhChuComponent],
+  declarations: [ItemPhimComponent, TinTucComponent, DienAnhComponent, ReViewComponent, KhuyenMaiComponent, LienHeComponent, FormLienHeComponent, ThongTinLienHeComponent, HeaderComponent, FooterComponent,CoffeeTranhChuComponent, SliderComponent, LoaiPhimComponent, PhimDangChieuComponent, PhimSapChieuComponent, ItemTinTucComponent],
   imports: [
     CommonModule
   ],
   exports:[
-   ItemPhimComponent, TinTucComponent, DienAnhComponent, ReViewComponent, KhuyenMaiComponent, LienHeComponent, FormLienHeComponent, ThongTinLienHeComponent, HeaderComponent, FooterComponent, CoffeeTranhChuComponent
+   ItemPhimComponent, TinTucComponent, DienAnhComponent, ReViewComponent, KhuyenMaiComponent, LienHeComponent, FormLienHeComponent, ThongTinLienHeComponent, HeaderComponent, FooterComponent, CoffeeTranhChuComponent, SliderComponent, LoaiPhimComponent, PhimDangChieuComponent, PhimSapChieuComponent, ItemTinTucComponent
   ]
 })
 export class CoffeeModule { }
