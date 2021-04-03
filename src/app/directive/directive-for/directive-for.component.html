@@ -23,14 +23,19 @@
         <input #MaSv type="text" class="form-control"/>
     </div>
     <div class="form-group">
-        <span>Họ tên</span>
+        <span appHighlight>Họ tên</span>
         <input #HoTen type="text" class="form-control"/>
     </div>
     <div class="form-group">
-        <span>Tuổi</span>
+        <span appHighlight2>Tuổi</span>
         <input #Tuoi type="text" class="form-control"/>
     </div>
     <div class="form-group">
         <button (click)="ThemSinhVien(MaSv.value,HoTen.value,Tuoi.value)" class="btn btn-success">Thêm Sinh Viên</button>
     </div>
 </div>
+<div [ngClass]="{highlight: status}">CyberSoft</div> 
+
+<button appButtonHover class="btn btn-red">
+    Hover-Button
+</button>

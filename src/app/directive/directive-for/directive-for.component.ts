@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectiveForComponent implements OnInit {
 
+  status:boolean= true;
+
   public DanhSachSinhVien:Array<any>=[
     {MaSV: "01", HoTen:"Nguyen Van A", Tuoi:15},
     {MaSV: "02", HoTen:"Nguyen Van B", Tuoi:16},
