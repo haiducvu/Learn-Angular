@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TransformServiceService } from 'src/app/observable/transform-service.service';
 import { UserService } from 'src/app/observable/user.service';
 
 @Component({
@@ -8,7 +9,13 @@ import { UserService } from 'src/app/observable/user.service';
 })
 export class CoffeeTranhChuComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  statusButton:boolean= false;
+  constructor(private userService: UserService, private transfom:TransformServiceService) { }
+
+  toggleSilder(){
+    this.statusButton== false? this.statusButton= true : this.statusButton=false;
+    this.transfom.transformData(this.statusButton);
+  }
 
   ngOnInit(): void {
     this.userService.getListUser().subscribe(
