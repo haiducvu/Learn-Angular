@@ -7,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoaiPhimComponent implements OnInit {
 
+  statusShowPhim: boolean= true;
   constructor() { }
-
+  HienPhimDangChieu(){
+    this.statusShowPhim= true;
+  }
+  HienPhimSapChieu(){
+    this.statusShowPhim= false;
+  }
   ngOnInit(): void {
   }
 

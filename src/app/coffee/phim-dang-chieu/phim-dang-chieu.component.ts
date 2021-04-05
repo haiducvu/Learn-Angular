@@ -8,7 +8,7 @@ declare var $:any;
 })
 export class PhimDangChieuComponent implements OnInit, AfterViewInit {
   DanhSachPhimDangChieu=[
-    {TenPhim:" Tên phim 1", HinhAnh:"Hình Ảnh 1"},
+    {TenPhim:" Đang Chiếu Tên phim 1", HinhAnh:"Hình Ảnh 1"},
     {TenPhim:" Tên phim 2", HinhAnh:"Hình Ảnh 2"},
     {TenPhim:" Tên phim 3", HinhAnh:"Hình Ảnh 3"},
     {TenPhim:" Tên phim 4", HinhAnh:"Hình Ảnh 4"},
