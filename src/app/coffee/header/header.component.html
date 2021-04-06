@@ -1,1 +1,37 @@
-<p>header works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-5 mx-auto">
+            <form #formRegister="ngForm" (ngSubmit)="register(formRegister.value)">
+                <h4>Register</h4>
+                    <div class="form-group">
+                        <label for="">Account</label>
+                        <input type="text" class="form-control" name="TaiKhoan" ngModel/>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input type="text" class="form-control" name="HoTen" ngModel/>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" name="HoTen" ngModel/>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="email" class="form-control" name="Email" ngModel/>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Phone:</label>
+                        <input type="text" class="form-control" name="SoDT" ngModel/>
+                    </div> 
+                    <div class="form-group">
+                        <label for="">Type User:</label>
+                        <input type="radio" ngModel value="KhangHang" name="MaLoaiNguoiDung"> Khách Hàng
+                        <input type="radio" ngModel value="QuanTri" name="MaLoaiNguoiDung"> Quản Trị
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-secondary" type="submit">Register</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div> 

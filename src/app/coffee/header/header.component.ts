@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
-
+  register(value){
+    console.log("VALUE", value);
+  }
   ngOnInit(): void {
   }
 

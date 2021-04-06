@@ -1,5 +1,6 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common'; 
 import { ItemPhimComponent } from './item-phim/item-phim.component';
 import { TinTucComponent } from './tin-tuc/tin-tuc.component';
 import { DienAnhComponent } from './dien-anh/dien-anh.component';
@@ -22,7 +23,7 @@ import { ItemTinTucComponent } from './item-tin-tuc/item-tin-tuc.component';
 @NgModule({
   declarations: [ItemPhimComponent, TinTucComponent, DienAnhComponent, ReViewComponent, KhuyenMaiComponent, LienHeComponent, FormLienHeComponent, ThongTinLienHeComponent, HeaderComponent, FooterComponent,CoffeeTranhChuComponent, SliderComponent, LoaiPhimComponent, PhimDangChieuComponent, PhimSapChieuComponent, ItemTinTucComponent],
   imports: [
-    CommonModule
+    CommonModule, FormsModule
   ],
   exports:[
    ItemPhimComponent, TinTucComponent, DienAnhComponent, ReViewComponent, KhuyenMaiComponent, LienHeComponent, FormLienHeComponent, ThongTinLienHeComponent, HeaderComponent, FooterComponent, CoffeeTranhChuComponent, SliderComponent, LoaiPhimComponent, PhimDangChieuComponent, PhimSapChieuComponent, ItemTinTucComponent
