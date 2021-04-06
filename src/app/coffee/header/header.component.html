@@ -5,11 +5,21 @@
                 <h4>Register</h4>
                     <div class="form-group">
                         <label for="">Account</label>
-                        <input type="text" class="form-control" name="TaiKhoan" ngModel/>
+                        <input type="text" required #taikhoan='ngModel' class="form-control" name="TaiKhoan" ngModel/>
+                        <div *ngIf="taikhoan.errors && (taikhoan.touched || taikhoan.dirty)">
+                            <div class="alert alert-danger" *ngIf="taikhoan.errors.required">
+                                Vui lòng nhập tài khoản
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="">Password</label>
-                        <input type="text" class="form-control" name="HoTen" ngModel/>
+                        <input type="text" #matkhau="ngModel" minlength="10" maxlength="20" required class="form-control" name="matKhau" ngModel/>
+                        <div *ngIf="matkhau.errors && (matkhau.touched || matkhau.dirty)">
+                            <div class="alert alert-danger" *ngIf="matkhau.errors.required">
+                                Vui lòng nhập tài khoản
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="">Name</label>
@@ -33,5 +43,41 @@
                     </div>
             </form>
         </div>
+    </div>
+    <!-- show add user -->
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Tài Khoản</th>
+                    <th>Mật Khẩu</th>
+                    <th>Email</th>
+                    <th>Họ tên</th>
+                    <th>Số điện thoại</th>
+                    <th>Mã loại người dùng</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let nguoidung of mangNguoiDungDangKy">
+                    <td>{{nguoidung.TaiKhoan}}</td>
+                    <td>{{nguoidung.matKhau}}</td>
+                    <td>{{nguoidung.HoTen}}</td>
+                    <td>{{nguoidung.Email}}</td>
+                    <td>{{nguoidung.SoDT}}</td>
+                    <td>{{nguoidung.MaLoaiNguoiDung}}</td>
+                    <td> 
+                        <button #btnCapNhat class="btn btn-success" 
+                        [attr.data-taikhoan]="nguoidung.TaiKhoan" 
+                        [attr.data-matKhau]="nguoidung.matKhau" 
+                        [attr.data-HoTen]="nguoidung.HoTen" 
+                        [attr.data-Email]="nguoidung.Email" 
+                        [attr.data-SoDT]="nguoidung.SoDT" 
+                        [attr.data-MaLoaiNguoiDung]="nguoidung.MaLoaiNguoiDung" (click)="CapNhat(btnCapNhat)"
+                        >Cập nhật</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div> 
