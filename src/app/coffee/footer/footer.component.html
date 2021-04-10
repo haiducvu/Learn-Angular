@@ -1,10 +1,13 @@
 <p>footer works!</p>
 <p>OUTPUT BINDING</p>
 
-<app-footer-child *ngFor="let author of authors" [author]="author" 
-    (select)="onSelected($event)"
-     (deleteAuthor)="handleDelete($event)"  
+<app-footer-child *ngFor="let item of listUser" [item]="item" 
+   (selectEvent)="onSelected($event)"
+   (deleteEvent)="handleDelete($event)"
 ></app-footer-child>  
 <div>
     current selected User: {{currentUser?.firstName}} {{currentUser?.lastName}} 
 </div>  
+
+<!-- (selectEvent)="onSelected($event)" // nhận EVENT khi Child Component bắng sang Parent Component
+(deleteAuthor)="handleDelete($event)"   -->
