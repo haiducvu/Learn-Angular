@@ -1,0 +1,8 @@
+<div *ngIf="author">
+   {{author.id}}
+   {{author.firstName}}
+   {{author.lastName}}
+   <button (click)="select.emit(author)">Select</button>
+   <button (click)="handleDelete()">X</button>
+</div>
+ 
