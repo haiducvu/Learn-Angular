@@ -1,33 +1,33 @@
 import { from } from 'rxjs';
 
-//Generis [T]
-export abstract class BaseService<T>{
-  protected model: T;
+// //Generis [T]
+// export abstract class BaseService<T>{
+//   protected model: T;
   
-  find():T[]{
-    return [this.model];
-  }
+//   find():T[]{
+//     return [this.model];
+//   }
 
-  findOne():T{
-    return this.model;
-  }
-}
+//   findOne():T{
+//     return this.model;
+//   }
+// }
 
-interface Dog{
-  bark(): void;
-}
+// interface Dog{
+//   bark(): void;
+// }
 
-interface Cat{
-  meow(): void;
-}
+// interface Cat{
+//   meow(): void;
+// }
 
-export class  DogService extends BaseService<Dog>{}
-export class  CatService extends BaseService<Cat>{}
+// export class  DogService extends BaseService<Dog>{}
+// export class  CatService extends BaseService<Cat>{}
 
-const dogService= new DogService();
-const catService= new CatService();
-dogService.findOne().bark();
-catService.findOne().meow();
+// const dogService= new DogService();
+// const catService= new CatService();
+// dogService.findOne().bark();
+// catService.findOne().meow();
 
 export interface Author {
     id: number;
