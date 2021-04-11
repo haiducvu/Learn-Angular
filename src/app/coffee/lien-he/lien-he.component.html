@@ -1,16 +1,15 @@
 <div class='lien-he'>
     <div class='container'>
       <div class='row'>
-          <div class='col-12 text-center'>
-              <h2>CONTACT US</h2>
+          <div class='col-12 text-center'>    
+              <h2>View Child/ View Chilren</h2>
+              <input #nameInput type="text" [ngModel]="name" (ngModelChange)="name = $event"> 
+                <!-- toggleComp là instance của ToggleComponent  //C1 #toogleComp-->
+               <app-toggle  [(checked)]="checked"></app-toggle>
+               <!-- cách tham chiếu trên template -->
+               <!-- <button (click)="toggleComp.toggle()">Toggle Button</button> -->
+               <button #toggleButton>Click Me</button>
           </div>
-        <div class="col-md-5">
-            <app-form-lien-he></app-form-lien-he>
-        </div>
-        <div class="col-md-5">
-            <app-form-lien-he></app-form-lien-he>
-        </div>
-      </div>  
-      
+      </div>   
     </div>
 </div>
