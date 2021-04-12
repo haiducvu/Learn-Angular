@@ -21,16 +21,20 @@ import { FooterChildComponent } from './footer/footer_child.component';
 import { ToggleComponent } from './lien-he/toggle/toggle.component';
 import { NgTemplateOutletContainerComponent } from './ng-template-outlet-container/ng-template-outlet-container.component';
 import { TabsComponent } from './ng-template-outlet-container/tabs/tabs.component';
+import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
+import { DanhSachGheComponent } from './danh-sach-ghe/danh-sach-ghe.component';
+import { GheComponent } from './ghe/ghe.component';
+import { EditDsgheComponent } from './edit-dsghe/edit-dsghe.component';
 
 
 
 @NgModule({
-  declarations: [ItemPhimComponent, TinTucComponent, DienAnhComponent, ReViewComponent, KhuyenMaiComponent, LienHeComponent, FormLienHeComponent, ThongTinLienHeComponent, HeaderComponent, FooterComponent,CoffeeTranhChuComponent, SliderComponent, LoaiPhimComponent, PhimDangChieuComponent, PhimSapChieuComponent, ItemTinTucComponent, FooterChildComponent, ToggleComponent, ToggleComponent, NgTemplateOutletContainerComponent, TabsComponent],
+  declarations: [ItemPhimComponent, TinTucComponent, DienAnhComponent, ReViewComponent, KhuyenMaiComponent, LienHeComponent, FormLienHeComponent, ThongTinLienHeComponent, HeaderComponent, FooterComponent,CoffeeTranhChuComponent, SliderComponent, LoaiPhimComponent, PhimDangChieuComponent, PhimSapChieuComponent, ItemTinTucComponent, FooterChildComponent, ToggleComponent, ToggleComponent, NgTemplateOutletContainerComponent, TabsComponent, DependencyInjectionComponent, DanhSachGheComponent, GheComponent, EditDsgheComponent],
   imports: [
     CommonModule, FormsModule
   ],
   exports:[
-   ItemPhimComponent, TinTucComponent, DienAnhComponent, ReViewComponent, KhuyenMaiComponent, LienHeComponent, FormLienHeComponent, ThongTinLienHeComponent, HeaderComponent, FooterComponent, CoffeeTranhChuComponent, SliderComponent, LoaiPhimComponent, PhimDangChieuComponent, PhimSapChieuComponent, ItemTinTucComponent, FooterChildComponent, ToggleComponent, NgTemplateOutletContainerComponent, TabsComponent
+   ItemPhimComponent, TinTucComponent, DienAnhComponent, ReViewComponent, KhuyenMaiComponent, LienHeComponent, FormLienHeComponent, ThongTinLienHeComponent, HeaderComponent, FooterComponent, CoffeeTranhChuComponent, SliderComponent, LoaiPhimComponent, PhimDangChieuComponent, PhimSapChieuComponent, ItemTinTucComponent, FooterChildComponent, ToggleComponent, NgTemplateOutletContainerComponent, TabsComponent, DependencyInjectionComponent, DanhSachGheComponent, GheComponent, EditDsgheComponent
   ]
 })
 export class CoffeeModule { }
