@@ -1,1 +1,13 @@
-<p>edit-dsghe works!</p>
+<div class="contained">
+    <div class="row">
+        <div class="col-4  mx-auto mb-3"> 
+            <h2 #title>Thêm Ghế</h2>
+            <input type="text" class="form-control mb-2"placeholder="Tên ghế" #ten>
+            <input type="text" class="form-control mb-2"placeholder="Số ghế" #soGhe>
+            <input type="text" class="form-control mb-2"placeholder="Giá" #Gia>
+            <input type="text" class="form-control mb-2"placeholder="Trạng thái" #trangThai>
+            <button class="btn btn-primary" (click)="themGheParent(ten.value,soGhe.value, Gia.value, trangThai.value)">Thêm ghế</button>
+        </div>
+    </div>
+</div>
+<app-danh-sach-ghe></app-danh-sach-ghe>

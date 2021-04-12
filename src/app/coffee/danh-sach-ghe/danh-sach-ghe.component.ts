@@ -37,7 +37,9 @@ export class DanhSachGheComponent implements OnInit {
         }
       }
     }
-    console.log(this.DanhSachGheDangDat);
-    
+    console.log(this.DanhSachGheDangDat); 
+  }
+  ThemGhe(gheDuocThem){
+    this.DanhSachGhe.push(gheDuocThem);
   }
 }
