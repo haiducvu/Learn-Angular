@@ -16,6 +16,11 @@ export class CoffeeTranhChuComponent implements OnInit {
     this.statusButton== false? this.statusButton= true : this.statusButton=false;
     this.transfom.transformData(this.statusButton);
   }
+  
+  loadedFeature= 'recipe'
+  onNavigate(feature: string){
+    this.loadedFeature= feature;
+  }
 
   ngOnInit(): void {
     this.userService.getListUser().subscribe(

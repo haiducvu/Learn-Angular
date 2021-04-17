@@ -1,5 +1,6 @@
-import { from } from 'rxjs';
-
+import { observable } from 'rxjs';
+import { from, merge, of } from 'rxjs';
+import {delay, map} from 'rxjs/operators';
 // //Generis [T]
 // export abstract class BaseService<T>{
 //   protected model: T;
@@ -120,7 +121,6 @@ export interface Author {
       ipAddress: "173.107.238.31"
     }
   ];
-  
 
   export const DanhSachGhe=[
     {SoGhe:1,TenGhe: "số 1", Gia:100, TrangThai:false},
@@ -159,3 +159,32 @@ export interface Author {
 {SoGhe:34,TenGhe: "số 34", Gia:100, TrangThai:false},
 {SoGhe:35,TenGhe: "số 35", Gia:100, TrangThai:false}
   ]
+// Create observable
+const observe={
+  next: value=> console.log('value',value),
+  error: err=> console.log('err',err),
+  complete:()=> console.log('completed'), 
+}
+//Transformation Operators
+//map in RxJs
+of(authors) // outer observable parent observable
+.pipe(map(data=>{   //tức là map ở đây nhận giá trị từ observable này || map bên Array là map từng phần tử 
+  return data;
+}))
+.subscribe(observe)
+
+merge(
+  of(authors[0]).pipe(delay(2000)), 
+  of(authors[1]).pipe(delay(4000)), 
+).pipe(
+  map(item => ({...item, fullName: `${item.firstName} ${item.lastName}`}))
+).subscribe(observe)
+
+
+//pluck(nhổ)
+
+
+
+
+
+ 
